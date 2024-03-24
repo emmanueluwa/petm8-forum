@@ -1,0 +1,55 @@
+data = {
+  threads: {
+   'a1',
+      {
+      '.key': 't1',
+      title: 'first thread',
+      publishedAt: '',
+      posts: {
+        p1: p1, // switch too booleans later which will be lighter
+      },
+      userId: 'u1'
+      }
+  },
+  posts: {
+    p1: {
+      '.key': 'b1',
+      publishedAt: '',
+      userId: '',
+      text: 'Hi there',
+      threadId: 'a1'
+    }
+  },
+  users: {
+    u1: {
+      name: 'lukman',
+      '.key': 'u1',
+      threads: {
+        'a1',
+      },
+      posts: {
+        'p1',
+      }
+    }
+  },
+  forums: {
+    f1: {
+      '.key': 'f1',
+      name: 'Fishing',
+      description: '',
+      categoryId: '',
+      threads: {
+        t1: 't1'
+      }
+    }
+  }, 
+  categories: {
+    c1: {
+      '.key':  'c1',
+      name: 'Discussions',
+      forums: {
+        f1: 'f1'
+      }
+    }
+  }
+}
