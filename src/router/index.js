@@ -1,15 +1,23 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
+import Vue from "vue";
+import Router from "vue-router";
+import HelloWorld from "@/components/HelloWorld";
+import ThreadReveal from "@/components/ThreadReveal";
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
   routes: [
     {
-      path: '/',
-      name: 'Hello',
+      path: "/",
+      name: "Hello",
       component: HelloWorld
+    },
+    {
+      path: "/thread/:id",
+      name: "ThreadReveal",
+      component: ThreadReveal,
+      props: true // pass params
     }
-  ]
-})
+  ],
+  mode: "history"
+});
