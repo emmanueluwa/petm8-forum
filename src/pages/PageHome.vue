@@ -1,12 +1,10 @@
 <script>
 import sourceData from "../data.json";
-import ThreadList from "./ThreadList.vue";
+import ThreadList from "../components/ThreadList.vue";
 
 console.log(sourceData);
 
 export default {
-  name: "HelloWorld",
-
   components: {
     ThreadList
   },
@@ -22,7 +20,7 @@ export default {
 </script>
 
 <template>
-  <div class="col-ful">
+  <div class="col-full">
     <h1>Welcome to the forum for genuine pet lovers</h1>
     <ThreadList :threads="threads" />
   </div>

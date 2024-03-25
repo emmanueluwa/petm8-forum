@@ -1,7 +1,8 @@
 import Vue from "vue";
 import Router from "vue-router";
-import HelloWorld from "@/components/HelloWorld";
-import ThreadReveal from "@/components/ThreadReveal";
+import PageHome from "@/pages/PageHome";
+import PageThreadReveal from "@/pages/PageThreadReveal";
+import PageNotFound from "@/pages/PageNotFound";
 
 Vue.use(Router);
 
@@ -9,14 +10,19 @@ export default new Router({
   routes: [
     {
       path: "/",
-      name: "Hello",
-      component: HelloWorld
+      name: "Home",
+      component: PageHome
     },
     {
       path: "/thread/:id",
-      name: "ThreadReveal",
-      component: ThreadReveal,
+      name: "PageThreadReveal",
+      component: PageThreadReveal,
       props: true // pass params
+    },
+    {
+      path: "*",
+      name: "NotFound",
+      component: PageNotFound
     }
   ],
   mode: "history"
